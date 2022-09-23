@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="imagenes/vector.svg">
+        </div>
+    </header>
+    
+
+    <main>
+        <div id="div-desaparece" class="botones-home">
+            <a href="#horca">
+                <input class="btn-iniciar" type="submit" value="Iniciar juego" id="iniciar-juego" onclick="iniciarJuego()">
+            </a>
+            <a>
+                <input class="btn-agregar-palabra" type="submit" value="Agregar nueva palabra" id="agregar-palabra" onclick="agregarPalabra()">
+            </a>
+        </div>
+    
+    
+        <div id="div-aparece-ahorcado" class="canvas">
+            <canvas id="horca" width="1200" height="860" class="horca"></canvas>
+            
+    
+    
+            <div class="subrayado">
+                <a >
+                    <input class="btn-nuevo-juego" type="submit" value="Nuevo juego" id="nuevo-juego" onclick="nuevoJuego()">
+                    <input class="desistir" type="submit" value="Desistir" id="desistir" onclick="desistir()">
+                </a>
+                
+            </div>
+    
+        </div>
+    
+        <div id="div-aparece-agregar" class="div-aparece-agregar">
+    
+            <input placeholder="Ingrese el texto aquí" class="campo-texto" id="texto-recibido">
+    
+            <div class="mensaje-advertencia">
+                <img src="imagenes/simbolo.png" alt="simbolo de advertencia" class="simbolo">
+                <p class="mensaje-letras">Solo letras y sin acentos</p>
+            </div>
+            
+            <div class="botones-para-agregar-palabra">
+               
+                <a>
+                    <input class="guardar-empezar" type="submit" value="Guardar y empezar" id="guardar-empezar" onclick="guardarEmpezar()">
+                    <input class="cancelar" type="submit" value="Cancelar" id="cancelar" onclick="cancelar()">
+                </a>
+            </div>
+           
+    
+        </div>
+    </main>
+    <footer>
+        <div class="redes">
+            <a href="https://www.instagram.com/jose.al33/">
+                <img src="imagenes/instagram.png" alt="logo instagram(enlace)" class="instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/jose-alejandro-contreras/">
+                <img src="imagenes/linkedin.png" alt="logo linkedin(enlace)" class="linkedin">
+            </a>
+            <a href="https://github.com/JoseAlejandro11235">
+                <img src="imagenes/github.png" alt="logo github(enlace)" class="github">
+            </a>
+            <p>By Jose Contreras</p>
+        </div>
+    </footer>
+
+    <script src="horca.js"></script>
+    <script src="canvas.js"></script>
+</body>
+</html>
